@@ -1,0 +1,31 @@
+{
+  "name": "@blindintent/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx --env-file=../.env src/index.ts",
+    "start": "tsx src/index.ts",
+    "test": "tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "sandbox:keygen": "tsx scripts/setupSandbox.ts keygen",
+    "sandbox:init": "tsx --env-file=../.env scripts/setupSandbox.ts init",
+    "live:launch": "tsx --env-file=../.env scripts/liveLaunch.ts"
+  },
+  "dependencies": {
+    "@cosmjs/stargate": "^0.39.0",
+    "@qorechain/evm": "^0.14.0",
+    "@qorechain/pqc": "^0.2.3",
+    "@qorechain/qoreseal": "^0.1.0",
+    "@qorechain/qoresign": "^0.2.0",
+    "@qorechain/sdk": "^0.14.0",
+    "express": "^4.21.2",
+    "viem": "~2.53.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.5",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.3"
+  }
+}

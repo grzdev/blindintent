@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+:root {
+  --bi-bg: #07090c;
+  --bi-surface: #0d1117;
+  --bi-elevated: #131922;
+  --bi-border: #1d2635;
+  --bi-teal: #00d4b8;
+  --bi-amber: #f59e0b;
+  --bi-rose: #fb7185;
+}
+
+body {
+  background-color: var(--bi-bg);
+  color: #f8fafc;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}

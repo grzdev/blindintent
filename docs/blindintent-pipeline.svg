@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 400" width="100%" role="img" aria-label="BlindIntent End-to-End Post-Quantum Agent Pipeline">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07090C"/>
+      <stop offset="100%" stop-color="#0B1119"/>
+    </linearGradient>
+    <marker id="arrTeal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#00D4B8"/>
+    </marker>
+    <marker id="arrAmber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#F59E0B"/>
+    </marker>
+    <style>
+      .pipe { stroke-dasharray: 5 5; animation: dash 2.2s linear infinite; }
+      @keyframes dash { to { stroke-dashoffset: -20; } }
+    </style>
+  </defs>
+
+  <rect x="2" y="2" width="1156" height="396" rx="16" fill="url(#bg)" stroke="#1D2635" stroke-width="1.5"/>
+  <text x="28" y="34" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="15.5" font-weight="700">BLINDINTENT ARCHITECTURE  •  ENCRYPTED INTENT → BOUNDED AGENT → PQC EVM PRECOMPILE</text>
+  <text x="1132" y="34" text-anchor="end" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5">QoreSeal + x/abstractaccount + 0x...0a01/0a02</text>
+  <line x1="28" y1="48" x2="1132" y2="48" stroke="#1D2635" stroke-width="1"/>
+
+  <!-- Stage 1 -->
+  <g transform="translate(28, 72)">
+    <rect x="0" y="0" width="246" height="296" rx="12" fill="#0D1117" stroke="#00D4B8" stroke-opacity="0.5" stroke-width="1.3"/>
+    <rect x="0" y="0" width="246" height="36" rx="12" fill="#042F2E"/>
+    <rect x="0" y="24" width="246" height="12" fill="#042F2E"/>
+    <text x="16" y="23" fill="#5EEAD4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700">1. INTENT COMPILER &amp; SEAL</text>
+
+    <rect x="14" y="52" width="218" height="62" rx="8" fill="#07090C" stroke="#1D2635"/>
+    <text x="24" y="72" fill="#F8FAFC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700">Plain-English Goal</text>
+    <text x="24" y="90" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">LLM / Deterministic Parser</text>
+    <text x="24" y="105" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10">server/src/intentCompiler.ts</text>
+
+    <rect x="14" y="126" width="218" height="72" rx="8" fill="#07090C" stroke="#1D2635"/>
+    <text x="24" y="146" fill="#00D4B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700">@qorechain/qoreseal</text>
+    <text x="24" y="164" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="11">ML-KEM-1024 + X25519 Seal</text>
+    <text x="24" y="182" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">MsgRegisterKEMKey Registry</text>
+
+    <rect x="14" y="210" width="218" height="72" rx="8" fill="#07090C" stroke="#1D2635"/>
+    <text x="24" y="230" fill="#FBBF24" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700">ML-DSA-87 Commitment</text>
+    <text x="24" y="248" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">keccak256 Vault Digest (32B)</text>
+    <text x="24" y="266" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10">2,592B PK · 4,627B Signature</text>
+  </g>
+
+  <path d="M 274 218 L 308 218" fill="none" stroke="#00D4B8" stroke-width="2" marker-end="url(#arrTeal)" class="pipe"/>
+
+  <!-- Stage 2 -->
+  <g transform="translate(312, 72)">
+    <rect x="0" y="0" width="268" height="296" rx="12" fill="#0D1117" stroke="#F59E0B" stroke-opacity="0.55" stroke-width="1.3"/>
+    <rect x="0" y="0" width="268" height="36" rx="12" fill="#271C0B"/>
+    <rect x="0" y="24" width="268" height="12" fill="#271C0B"/>
+    <text x="16" y="23" fill="#FBBF24" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700">2. BOUNDED AGENT &amp; AA</text>
+
+    <rect x="14" y="52" width="240" height="62" rx="8" fill="#07090C" stroke="#1D2635"/>
+    <text x="24" y="72" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700">x/amm Live Quote Feed</text>
+    <text x="24" y="90" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Pool #3 (fETH/fUSD) + Stress Lab</text>
+    <text x="24" y="105" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10">/qorechain/amm/v1/pools</text>
+
+    <rect x="14" y="126" width="240" height="78" rx="8" fill="#07090C" stroke="#F59E0B" stroke-opacity="0.45"/>
+    <text x="24" y="146" fill="#FBBF24" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700">x/abstractaccount Caps</text>
+    <text x="24" y="164" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="11">perTxLimit · dailyLimit · Expiry</text>
+    <text x="24" y="180" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="11">allowedEvmCalls: [Vault]</text>
+    <text x="24" y="196" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10">auth_nonce + evmAuthSignBytesV2</text>
+
+    <rect x="14" y="216" width="240" height="66" rx="8" fill="#07090C" stroke="#1D2635"/>
+    <text x="24" y="236" fill="#F8FAFC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700">Hybrid Relayer Dispatch</text>
+    <text x="24" y="254" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">EthNativeSigner · MsgExecuteEVM</text>
+    <text x="24" y="270" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10">assertAuthenticatorExecutionsSucceeded</text>
+  </g>
+
+  <path d="M 580 218 L 614 218" fill="none" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrAmber)" class="pipe"/>
+
+  <!-- Stage 3 -->
+  <g transform="translate(618, 72)">
+    <rect x="0" y="0" width="268" height="296" rx="12" fill="#0D1117" stroke="#1D2635" stroke-width="1.3"/>
+    <rect x="0" y="0" width="268" height="36" rx="12" fill="#131922"/>
+    <rect x="0" y="24" width="268" height="12" fill="#131922"/>
+    <text x="16" y="23" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700">3. SOLIDITY VAULT (EVM 9800)</text>
+
+    <rect x="14" y="52" width="240" height="72" rx="8" fill="#07090C" stroke="#1D2635"/>
+    <text x="24" y="72" fill="#00D4B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700">Precompile 0x...0a02</text>
+    <text x="24" y="90" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="11">pqcKeyStatus(owner)</text>
+    <text x="24" y="108" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">registered &amp;&amp; possessionProven</text>
+
+    <rect x="14" y="136" width="240" height="72" rx="8" fill="#07090C" stroke="#00D4B8" stroke-opacity="0.45"/>
+    <text x="24" y="156" fill="#00D4B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700">Precompile 0x...0a01</text>
+    <text x="24" y="174" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="11">pqcVerify(pk, sig, digest)</text>
+    <text x="24" y="192" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Enforces minAmountOut &amp; nonce</text>
+
+    <rect x="14" y="220" width="240" height="62" rx="8" fill="#07090C" stroke="#1D2635"/>
+    <text x="24" y="240" fill="#F8FAFC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700">BlindIntentVault.sol</text>
+    <text x="24" y="258" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">fETH ↔ fUSD Constant Product Swap</text>
+    <text x="24" y="273" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10">+ Sealed Receipt Emission</text>
+  </g>
+
+  <path d="M 886 218 L 920 218" fill="none" stroke="#00D4B8" stroke-width="2" marker-end="url(#arrTeal)" class="pipe"/>
+
+  <!-- Stage 4 -->
+  <g transform="translate(924, 72)">
+    <rect x="0" y="0" width="208" height="296" rx="12" fill="#0D1117" stroke="#1D2635" stroke-width="1.3"/>
+    <rect x="0" y="0" width="208" height="36" rx="12" fill="#131922"/>
+    <rect x="0" y="24" width="208" height="12" fill="#131922"/>
+    <text x="16" y="23" fill="#F8FAFC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700">4. 10-SECOND JUDGE UX</text>
+
+    <rect x="14" y="52" width="180" height="66" rx="8" fill="#07090C" stroke="#1D2635"/>
+    <text x="24" y="72" fill="#00D4B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700">Dual-Mode Onboarding</text>
+    <text x="24" y="90" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Instant Sandbox (0 setup)</text>
+    <text x="24" y="106" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">+ QoreX RainbowKit / SIWQ</text>
+
+    <rect x="14" y="128" width="180" height="72" rx="8" fill="#07090C" stroke="#1D2635"/>
+    <text x="24" y="148" fill="#F8FAFC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700">X-Ray Privacy Split</text>
+    <text x="24" y="166" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Public Redacted Mempool</text>
+    <text x="24" y="182" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">vs. Authorized Decrypt</text>
+
+    <rect x="14" y="210" width="180" height="72" rx="8" fill="#1F1218" stroke="#FB7185" stroke-opacity="0.45"/>
+    <text x="24" y="230" fill="#FB7185" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700">Live Attack Lab</text>
+    <text x="24" y="248" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="11">• Drain Wallet Injection</text>
+    <text x="24" y="264" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="11">• 10× Cap / Fake Sig Test</text>
+  </g>
+</svg>
